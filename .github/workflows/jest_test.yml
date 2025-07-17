@@ -66,9 +66,10 @@ jobs:
           junitxml-path: src/frontend/test-results/junit.xml
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+          slug: langflow-ai/langflow
           file: src/frontend/coverage/lcov.info
           flags: frontend
           name: frontend-coverage
